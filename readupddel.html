@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read/Update/Delete File</title>
+    <style>
+        /* Style for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/food2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        /* Style for the container */
+        h1 {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        
+        /* Style for the form elements */
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        /* Style for the buttons */
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background-color: #1f77d0;
+        }
+        
+        /* Style for the file list */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        ul li {
+            margin: 5px 0;
+        }
+        
+        /* Style for the file contents textarea */
+        #fileContents {
+            margin-top: 10px;
+        }
+        
+        .a-crud {
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 0;
+            display: block; 
+            margin: 1rem auto; 
+            background: var(--tenne-tawny); 
+            color: white;
+            border-radius: 2rem; 
+            width: 200px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 0.75rem 0; 
+            transition: all 0.4s linear; 
+        }
+        
+        .a-crud:hover {
+            background: var(--tenne-tawny-dark);
+            color: white; 
+        }  
+    </style>
+</head>
+<body>
+    <h1>Read/Update/Delete File</h1>
+    <label for="fileNameInput">File Name:</label>
+    <input type="text" id="fileNameInput">
+    <br>
+    <button id="btnAccess">Access File</button>
+    <button id="btnUpdate">Update File</button>
+    <button id="btnDelete">Delete File</button>
+    <h2>File list:</h2>
+    <ul id="fileList"></ul>
+    <br>
+    <textarea id="fileContents" rows="4" cols="50"></textarea>
+    <a href="index.html" class="a-crud">Go to Main Page</a>
+    <a href="create.html" class="a-crud">Create File</a>
+    <script src="readupddel.js"></script>
+</body>
+</html>

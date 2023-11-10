@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/food.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: liveBackground 20s linear infinite alternate;
+            background: linear-gradient(135deg, var(--color1), var(--color2));
+          }
+          
+          @keyframes liveBackground {
+            0% {
+              background: linear-gradient(135deg, var(--color1), var(--color2));
+            }
+            100% {
+              background: linear-gradient(135deg, var(--color2), var(--color1));
+            }
+          }
+          
+          :root {
+            --color1: #FF5733;
+            --color2: #FFAF2A; 
+          }
+
+
+        h1 {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+
+        #btnCreate {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #btnCreate:hover {
+            background-color: #1f77d0;
+        }
+
+        .a-link {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            font-size: 13px;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .a-link:hover {
+            background-color: #1f77d0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Create File</h1>
+    <p>This is the place you can save any recipe from the food item you wanted.</p>
+    <label for="fileName">File Name:</label>
+    <input type="text" id="fileName">
+    <br>
+    <label for="fileContents">File Contents:</label>
+    <textarea id="fileContents" rows="4" cols="50"></textarea>
+    <br>
+    <button id="btnCreate">Create File</button>
+    <a href="readupddel.html" class="a-link">Go to CRUD File</a>
+    <script src="create.js"></script>
+</body>
+</html>
